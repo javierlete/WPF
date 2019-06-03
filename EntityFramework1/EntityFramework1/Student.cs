@@ -14,5 +14,10 @@ namespace EntityFramework1
         public byte[] Photo { get; set; }
         public decimal Height { get; set; }
         public float Weight { get; set; }
+
+        public override string ToString()
+        {
+            return $"{StudentID}, {StudentName}";
+        }
     }
 }
