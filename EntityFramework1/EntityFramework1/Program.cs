@@ -14,6 +14,12 @@ namespace EntityFramework1
             {
                 Student s = ctx.Students.FirstOrDefault();
 
+                Console.WriteLine(ctx.Entry(s).State);
+
+                s.StudentName = "Javier Lete";
+
+                Console.WriteLine(ctx.Entry(s).State);
+
                 Console.WriteLine(s);
 
                 Student student = new Student()
@@ -23,7 +29,10 @@ namespace EntityFramework1
                     Weight = 70.0f
                 };
 
+                Console.WriteLine(ctx.Entry(student).State);
                 ctx.Students.Add(student);
+                Console.WriteLine(ctx.Entry(student).State);
+
                 ctx.SaveChanges();
             }
         }
