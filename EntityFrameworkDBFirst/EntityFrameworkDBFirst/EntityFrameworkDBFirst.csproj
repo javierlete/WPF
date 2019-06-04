@@ -52,10 +52,43 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ContosoUniversityModel.Context.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContosoUniversityModel.Context.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContosoUniversityModel.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContosoUniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="ContosoUniversityModel.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ContosoUniversityModel.edmx</DependentUpon>
+    </Compile>
+    <Compile Include="Course.cs">
+      <DependentUpon>ContosoUniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Department.cs">
+      <DependentUpon>ContosoUniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Department_Insert_Result.cs">
+      <DependentUpon>ContosoUniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Enrollment.cs">
+      <DependentUpon>ContosoUniversityModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Estudiante.cs">
       <DependentUpon>SchoolModel.tt</DependentUpon>
     </Compile>
     <Compile Include="EstudianteParcial.cs" />
+    <Compile Include="OfficeAssignment.cs">
+      <DependentUpon>ContosoUniversityModel.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Person.cs">
+      <DependentUpon>ContosoUniversityModel.tt</DependentUpon>
+    </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="SchoolModel.Context.cs">
@@ -80,12 +113,29 @@
       <Generator>EntityModelCodeGenerator</Generator>
       <LastGenOutput>SchoolModel.Designer.cs</LastGenOutput>
     </EntityDeploy>
+    <EntityDeploy Include="ContosoUniversityModel.edmx">
+      <Generator>EntityModelCodeGenerator</Generator>
+      <LastGenOutput>ContosoUniversityModel.Designer.cs</LastGenOutput>
+    </EntityDeploy>
+    <None Include="ContosoUniversityModel.edmx.diagram">
+      <DependentUpon>ContosoUniversityModel.edmx</DependentUpon>
+    </None>
     <None Include="packages.config" />
     <None Include="SchoolModel.edmx.diagram">
       <DependentUpon>SchoolModel.edmx</DependentUpon>
     </None>
   </ItemGroup>
   <ItemGroup>
+    <Content Include="ContosoUniversityModel.Context.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ContosoUniversityModel.edmx</DependentUpon>
+      <LastGenOutput>ContosoUniversityModel.Context.cs</LastGenOutput>
+    </Content>
+    <Content Include="ContosoUniversityModel.tt">
+      <Generator>TextTemplatingFileGenerator</Generator>
+      <DependentUpon>ContosoUniversityModel.edmx</DependentUpon>
+      <LastGenOutput>ContosoUniversityModel.cs</LastGenOutput>
+    </Content>
     <Content Include="SchoolModel.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <LastGenOutput>SchoolModel.Context.cs</LastGenOutput>
