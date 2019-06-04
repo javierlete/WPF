@@ -8,7 +8,28 @@ namespace EntityFramework1
 {
     class Program
     {
-        static void Main(string[] args)
+        static void Main()
+        {
+            using (SchoolContext ctx = new SchoolContext())
+            {
+                ctx.Database.Log = s => System.Diagnostics.Debug.WriteLine(s);
+
+                var students = from s in ctx.Students
+                               where s.StudentID < 3
+                               select s;
+
+                students = ctx.Students.Where(s => s.StudentID < 5);
+
+                students = students.Where(s => s.StudentName.Contains("Lete"));
+
+                foreach (var s in students)
+                {
+                    Console.WriteLine(s.StudentID);
+                }
+            }
+        }
+
+        static void MainActualizaciones(string[] args)
         {
             using (SchoolContext ctx = new SchoolContext())
             {
@@ -21,6 +42,11 @@ namespace EntityFramework1
                 Console.WriteLine(ctx.Entry(s).State);
 
                 Console.WriteLine(s);
+
+                ctx.Students.Remove(s);
+
+                Console.WriteLine(ctx.Entry(s).State);
+
 
                 Student student = new Student()
                 {
