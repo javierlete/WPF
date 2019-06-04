@@ -22,10 +22,26 @@ namespace EntityFramework1
 
                 students = students.Where(s => s.StudentName.Contains("Lete"));
 
-                foreach (var s in students)
+                List<Student> estudiantes = students.ToList();
+
+                foreach (var s in estudiantes)
                 {
                     Console.WriteLine(s.StudentID);
                 }
+
+                var estudiante = (from s in ctx.Students
+                                 where s.StudentID == 3
+                                 select s.StudentName).SingleOrDefault();
+
+                Console.WriteLine(estudiante);
+
+                var objetoAMedida = (from s in ctx.Students
+                                  where s.StudentID == 3
+                                  select new
+                                  { Nombre = s.StudentName, ID = s.StudentID })
+                                  .SingleOrDefault();
+
+                Console.WriteLine(objetoAMedida.Nombre);
             }
         }
 
