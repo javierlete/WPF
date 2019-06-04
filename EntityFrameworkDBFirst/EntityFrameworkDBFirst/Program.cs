@@ -11,6 +11,28 @@ namespace EntityFrameworkDBFirst
     {
         static void Main()
         {
+            var departamento = new Department()
+            {
+                DepartmentID = 5,
+                Name = "Nuevo",
+                StartDate = DateTime.Now
+            };
+
+            using (ContosoUniversityMigrationsEntities context = new ContosoUniversityMigrationsEntities())
+            {
+                context.Entry(departamento).State = EntityState.Modified;
+
+                foreach (var entity in context.ChangeTracker.Entries())
+                {
+                    Console.WriteLine("{0}: {1}", entity.Entity.GetType().Name, entity.State);
+                }
+
+                context.SaveChanges();
+            }
+        }
+
+        static void MainExplicitEagerLoading()
+        {
             using (ContosoUniversityMigrationsEntities ctx = new ContosoUniversityMigrationsEntities())
             {
                 ctx.Database.Log = s => Console.WriteLine(s);
@@ -23,7 +45,7 @@ namespace EntityFrameworkDBFirst
                     Console.WriteLine(d.Name);
                     Console.WriteLine(d.Person.FirstName);
 
-                    foreach(Course c in d.Courses)
+                    foreach (Course c in d.Courses)
                     {
                         Console.WriteLine($"\t{c.Title}");
                     }
