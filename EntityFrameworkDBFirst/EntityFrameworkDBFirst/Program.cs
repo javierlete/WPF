@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Data.Entity;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,9 +15,10 @@ namespace EntityFrameworkDBFirst
             {
                 ctx.Database.Log = s => Console.WriteLine(s);
 
-                foreach (Department d in ctx.Departments)
+                foreach (Department d in ctx.Departments.Include(d => d.Courses).Include(d => d.Person))
                 {
                     Console.WriteLine(d.Name);
+                    Console.WriteLine(d.Person.FirstName);
 
                     foreach(Course c in d.Courses)
                     {
