@@ -10,6 +10,13 @@ namespace EntityFrameworkDBFirst
     {
         static void Main(string[] args)
         {
+            using (SchoolEntities ctx = new SchoolEntities())
+            {
+                foreach (Estudiante estudiante in ctx.Estudiantes)
+                {
+                    Console.WriteLine(estudiante);
+                }
+            }
         }
     }
 }
