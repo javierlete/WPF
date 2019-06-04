@@ -20,6 +20,8 @@ namespace EntityFrameworkDBFirst
 
             using (ContosoUniversityMigrationsEntities context = new ContosoUniversityMigrationsEntities())
             {
+                context.Database.Log = s => Console.WriteLine(s);
+
                 context.Entry(departamento).State = EntityState.Modified;
 
                 foreach (var entity in context.ChangeTracker.Entries())
