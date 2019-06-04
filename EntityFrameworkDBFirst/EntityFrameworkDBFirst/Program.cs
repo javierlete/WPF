@@ -17,6 +17,9 @@ namespace EntityFrameworkDBFirst
 
                 foreach (Department d in ctx.Departments.Include(d => d.Courses).Include(d => d.Person))
                 {
+                    //ctx.Entry(d).Reference(dpto => dpto.Person).Load();
+                    //ctx.Entry(d).Collection(dpto => dpto.Courses).Load();
+
                     Console.WriteLine(d.Name);
                     Console.WriteLine(d.Person.FirstName);
 

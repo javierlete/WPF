@@ -20,6 +20,7 @@ namespace EntityFrameworkDBFirst
         public ContosoUniversityMigrationsEntities()
             : base("name=ContosoUniversityMigrationsEntities")
         {
+            this.Configuration.LazyLoadingEnabled = false;
         }
     
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
