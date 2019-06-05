@@ -20,5 +20,6 @@
         <TextBlock>Otra ventana diferente</TextBlock>
         <TextBlock Text="{StaticResource strHolaMundo}" />
         <ComboBox ItemsSource="{StaticResource ComboBoxItems}" />
+        <Button Click="Button_Click">Provocar error</Button>
     </WrapPanel>
 </Window>

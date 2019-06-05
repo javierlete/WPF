@@ -1,7 +1,9 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
 using System.Linq;
 using System.Text;
+using System.Threading;
 using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
@@ -15,19 +17,20 @@ using System.Windows.Shapes;
 namespace WpfApp1
 {
     /// <summary>
-    /// Lógica de interacción para Window1.xaml
+    /// Lógica de interacción para Window2.xaml
     /// </summary>
-    public partial class Window1 : Window
+    public partial class Window2 : Window
     {
-        public Window1()
+        public Window2()
         {
             InitializeComponent();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void CultureInfoSwitchButton_Click(object sender, RoutedEventArgs e)
         {
-            string s = null;
-            s.Trim();
+            Thread.CurrentThread.CurrentCulture = new CultureInfo((sender as Button).Tag.ToString());
+            lblNumber.Content = (123456789.42d).ToString("N2");
+            lblDate.Content = DateTime.Now.ToString();
         }
     }
 }

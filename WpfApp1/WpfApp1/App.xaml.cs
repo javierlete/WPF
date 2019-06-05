@@ -15,17 +15,23 @@ namespace WpfApp1
     {
         private void Application_Startup(object sender, StartupEventArgs e)
         {
-            if (e.Args.Length == 1)
-                MessageBox.Show("Now opening file: \n\n" + e.Args[0]);
-
-            MessageBox.Show(this.FindResource("SaludoInicial").ToString());
+            //if (e.Args.Length == 1)
+            //    MessageBox.Show("Now opening file: \n\n" + e.Args[0]);
+            //
+            //MessageBox.Show(this.FindResource("SaludoInicial").ToString());
 
             // Create the startup window
-            Window1 wnd = new Window1();
+            Window2 wnd = new Window2();
             // Do stuff here, e.g. to the window
             wnd.Title = "Something else";
             // Show the window
             wnd.Show();
+        }
+
+        private void Application_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
+        {
+            MessageBox.Show("Error no esperado");
+            e.Handled = true;
         }
     }
 }
