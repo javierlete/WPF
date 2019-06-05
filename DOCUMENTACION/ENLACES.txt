@@ -1,4 +1,8 @@
+https://www.campusmvp.es/recursos/post/10-diferencias-entre-net-core-y-net-framework.aspx
+
 https://docs.microsoft.com/es-es/ef/
 https://docs.microsoft.com/es-es/ef/ef6/
 http://entityframeworktutorial.net
+
+https://wpf-tutorial.com/
 
