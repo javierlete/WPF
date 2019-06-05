@@ -88,5 +88,10 @@ namespace WpfApp1
         {
             MessageBox.Show("You clicked me at " + e.GetPosition(this).ToString());
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            new Window1().Show();
+        }
     }
 }

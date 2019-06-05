@@ -18,7 +18,7 @@
             <Button.FontWeight>Bold</Button.FontWeight>
             <Button.Content>A button</Button.Content>
         </Button>
-        <Button>
+        <Button Click="Button_Click_1">
             <Button.FontWeight>Bold</Button.FontWeight>
             <Button.Content>
                 <WrapPanel>
