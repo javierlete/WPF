@@ -4,9 +4,21 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfApp1"
+        xmlns:sys="clr-namespace:System;assembly=mscorlib"
         mc:Ignorable="d"
         Title="Window1" Height="450" Width="800">
-    <Grid>
+    <Window.Resources>
+        <sys:String x:Key="strHolaMundo">¡Hola Mundo!</sys:String>
+
+        <x:Array x:Key="ComboBoxItems" Type="sys:String">
+            <sys:String>Item #1</sys:String>
+            <sys:String>Item #2</sys:String>
+            <sys:String>Item #3</sys:String>
+        </x:Array>
+    </Window.Resources>
+    <WrapPanel>
         <TextBlock>Otra ventana diferente</TextBlock>
-    </Grid>
+        <TextBlock Text="{StaticResource strHolaMundo}" />
+        <ComboBox ItemsSource="{StaticResource ComboBoxItems}" />
+    </WrapPanel>
 </Window>
