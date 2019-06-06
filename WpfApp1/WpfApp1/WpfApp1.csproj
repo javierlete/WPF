@@ -55,8 +55,17 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EjemploBindingBasico.xaml.cs">
+      <DependentUpon>EjemploBindingBasico.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EjemploGrid.xaml.cs">
       <DependentUpon>EjemploGrid.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EjemploUserControl.xaml.cs">
+      <DependentUpon>EjemploUserControl.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="LimitedInputUserControl.xaml.cs">
+      <DependentUpon>LimitedInputUserControl.xaml</DependentUpon>
     </Compile>
     <Compile Include="Window1.xaml.cs">
       <DependentUpon>Window1.xaml</DependentUpon>
@@ -64,7 +73,19 @@
     <Compile Include="Window2.xaml.cs">
       <DependentUpon>Window2.xaml</DependentUpon>
     </Compile>
+    <Page Include="EjemploBindingBasico.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EjemploGrid.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EjemploUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="LimitedInputUserControl.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
