@@ -27,7 +27,7 @@ namespace WpfApp1
             // Show the window
             //wnd.Show();
 
-            new EjemploListadoUsuarios().Show();
+            new EjemploConversion().Show();
         }
 
         private void Application_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
