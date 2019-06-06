@@ -23,6 +23,7 @@ namespace WpfApp1
         public EjemploConversion()
         {
             InitializeComponent();
+            this.DataContext = 5;
         }
     }
 
