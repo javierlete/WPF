@@ -27,7 +27,7 @@ namespace WpfApp1
             // Show the window
             //wnd.Show();
 
-            new EjemploBindingBasico().Show();
+            new EjemploBindingVentana().Show();
         }
 
         private void Application_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
