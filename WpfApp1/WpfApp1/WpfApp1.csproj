@@ -61,6 +61,9 @@
     <Compile Include="EjemploBindingVentana.xaml.cs">
       <DependentUpon>EjemploBindingVentana.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EjemploCommand.xaml.cs">
+      <DependentUpon>EjemploCommand.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EjemploConversion.xaml.cs">
       <DependentUpon>EjemploConversion.xaml</DependentUpon>
     </Compile>
@@ -87,6 +90,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EjemploBindingVentana.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EjemploCommand.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
