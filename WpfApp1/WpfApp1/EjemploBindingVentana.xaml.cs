@@ -24,5 +24,11 @@ namespace WpfApp1
             InitializeComponent();
             this.DataContext = this;
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            BindingExpression binding = txtWindowTitle.GetBindingExpression(TextBox.TextProperty);
+            binding.UpdateSource();
+        }
     }
 }
