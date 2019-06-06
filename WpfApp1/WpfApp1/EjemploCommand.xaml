@@ -8,9 +8,18 @@
         Title="EjemploCommand" Height="450" Width="800">
     <Window.CommandBindings>
         <CommandBinding Command="ApplicationCommands.New" Executed="CommandBinding_Executed" CanExecute="CommandBinding_CanExecute" />
+        <!--<CommandBinding Command="ApplicationCommands.Cut" CanExecute="CutCommand_CanExecute" Executed="CutCommand_Executed" />
+        <CommandBinding Command="ApplicationCommands.Paste" CanExecute="PasteCommand_CanExecute" Executed="PasteCommand_Executed" />-->
     </Window.CommandBindings>
     <StackPanel>
         <Button Command="ApplicationCommands.New">Nuevo</Button>
         <Button Click="Button_Click" Command="ApplicationCommands.New">Otra vez nuevo</Button>
+        <DockPanel>
+            <WrapPanel DockPanel.Dock="Top" Margin="3">
+                <Button Command="ApplicationCommands.Cut" Width="60" CommandTarget="{Binding ElementName=txtEditor}">_Cut</Button>
+                <Button Command="ApplicationCommands.Paste" Width="60" Margin="3,0" CommandTarget="{Binding ElementName=txtEditor}">_Paste</Button>
+            </WrapPanel>
+            <TextBox AcceptsReturn="True" Name="txtEditor" />
+        </DockPanel>
     </StackPanel>
 </Window>
