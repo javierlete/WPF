@@ -4,11 +4,13 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:system="clr-namespace:System;assembly=mscorlib"
+        xmlns:diag="clr-namespace:System.Diagnostics;assembly=WindowsBase"
         xmlns:local="clr-namespace:WpfApp1"
         mc:Ignorable="d"
         Title="EjemploConversion" Height="450" Width="800">
     <Window.Resources>
         <local:YesNoToBooleanConverter x:Key="YesNoToBooleanConverter" />
+        <local:DebugDummyConverter x:Key="DebugDummyConverter" />
     </Window.Resources>
     <StackPanel Margin="10">
         <TextBox Name="txtValue" />
@@ -21,7 +23,12 @@
             <TextBlock Text="{Binding Source={x:Static system:DateTime.Now}, ConverterCulture='de-DE', StringFormat=German date: {0:D}}" />
             <TextBlock Text="{Binding Source={x:Static system:DateTime.Now}, ConverterCulture='en-US', StringFormat=American date: {0:D}}" />
             <TextBlock Text="{Binding Source={x:Static system:DateTime.Now}, ConverterCulture='ja-JP', StringFormat=Japanese date: {0:D}}" />
-            <TextBlock Text="{Binding ConverterCulture='es-ES',StringFormat=Numero: {0:C}}"/>
+            <TextBlock Text="{Binding 
+                Path=Text, 
+                ConverterCulture='es-ES',
+                
+                diag:PresentationTraceSources.TraceLevel=High, 
+                Converter={StaticResource DebugDummyConverter}}"/>
         </StackPanel>
     </StackPanel>
 </Window>
