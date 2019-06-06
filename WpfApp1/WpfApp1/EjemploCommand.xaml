@@ -11,6 +11,6 @@
     </Window.CommandBindings>
     <StackPanel>
         <Button Command="ApplicationCommands.New">Nuevo</Button>
-        <Button Command="ApplicationCommands.New">Otra vez nuevo</Button>
+        <Button Click="Button_Click" Command="ApplicationCommands.New">Otra vez nuevo</Button>
     </StackPanel>
 </Window>
