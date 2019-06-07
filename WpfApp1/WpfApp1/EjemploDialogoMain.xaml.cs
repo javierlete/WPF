@@ -26,7 +26,7 @@ namespace WpfApp1
 
         private void BtnMostrarDialogo_Click(object sender, RoutedEventArgs e)
         {
-            EjemploDialogo ed = new EjemploDialogo("Dame tu nombre:", "Javier Lete");
+            EjemploDialogo ed = new EjemploDialogo(this, "Dame tu nombre:", "Javier Lete");
 
             if(ed.ShowDialog() == true)
             {

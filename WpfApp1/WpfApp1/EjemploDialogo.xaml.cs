@@ -19,12 +19,14 @@ namespace WpfApp1
     /// </summary>
     public partial class EjemploDialogo : Window
     {
-        public EjemploDialogo(string pregunta, string respuestaPorDefecto = "")
+        public EjemploDialogo(Window ventanaPrincipal, string pregunta, string respuestaPorDefecto = "")
         {
             InitializeComponent();
 
             txtAnswer.Text = respuestaPorDefecto;
             lblQuestion.Content = pregunta;
+
+            Owner = ventanaPrincipal;
         }
 
         private void Window_ContentRendered(object sender, EventArgs e)
