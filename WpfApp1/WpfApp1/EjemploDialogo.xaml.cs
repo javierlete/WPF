@@ -50,5 +50,15 @@ namespace WpfApp1
             //No mejora la situación de pérdida de foco
             Activate();
         }
+
+        private void CmBotonOpcion1_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Opcion 1");
+        }
+
+        private void CmBotonOpcion2_Click(object sender, RoutedEventArgs e)
+        {
+            MessageBox.Show("Opcion 2");
+        }
     }
 }
