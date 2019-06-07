@@ -1,4 +1,7 @@
-﻿using System.Windows;
+﻿using Microsoft.Win32;
+using System;
+using System.IO;
+using System.Windows;
 using System.Windows.Input;
 
 namespace WpfApp1
@@ -64,6 +67,24 @@ namespace WpfApp1
                 MessageBoxResult.No) == MessageBoxResult.Yes)
             {
                 Application.Current.Shutdown();
+            }
+        }
+
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            OpenFileDialog openFileDialog = new OpenFileDialog();
+
+            openFileDialog.Filter = @"Textos (*.txt)|*.txt|Configuraciones (*.config)|*.config|XMLs|*.xml";
+            //openFileDialog.InitialDirectory = @"C:\WPF\DOCUMENTACION";
+            openFileDialog.InitialDirectory = Environment.GetFolderPath(Environment.SpecialFolder.MyDocuments);
+            openFileDialog.Multiselect = true;
+
+            if (openFileDialog.ShowDialog() == true)
+            {
+                txtEditor.Text = "";
+                //txtEditor.Text = File.ReadAllText(openFileDialog.FileName);
+                foreach (string fichero in openFileDialog.FileNames)
+                    txtEditor.Text += File.ReadAllText(fichero);
             }
         }
     }

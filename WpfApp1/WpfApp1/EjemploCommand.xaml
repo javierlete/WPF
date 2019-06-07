@@ -16,6 +16,7 @@
     <DockPanel>
         <Menu DockPanel.Dock="Top">
             <MenuItem Header="File">
+                <MenuItem Click="MenuItem_Click" Header="Abrir" />
                 <MenuItem Command="local:CustomCommands.Exit" />
             </MenuItem>
         </Menu>
