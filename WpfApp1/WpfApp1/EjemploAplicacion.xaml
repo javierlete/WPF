@@ -42,6 +42,11 @@
                 <Button ToolBar.OverflowMode="Never" Command="Paste">Paste</Button>
             </ToolBar>
         </ToolBarTray>
-        <TextBox AcceptsReturn="True" />
+        <StatusBar DockPanel.Dock="Bottom">
+            <StatusBarItem>
+                <TextBlock Name="lblCursorPosition" />
+            </StatusBarItem>
+        </StatusBar>
+        <TextBox Name="txtEditor" SelectionChanged="TxtEditor_SelectionChanged" AcceptsReturn="True" />
     </DockPanel>
 </Window>
