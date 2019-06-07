@@ -67,6 +67,12 @@
     <Compile Include="EjemploConversion.xaml.cs">
       <DependentUpon>EjemploConversion.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EjemploDialogo.xaml.cs">
+      <DependentUpon>EjemploDialogo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="EjemploDialogoMain.xaml.cs">
+      <DependentUpon>EjemploDialogoMain.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EjemploGrid.xaml.cs">
       <DependentUpon>EjemploGrid.xaml</DependentUpon>
     </Compile>
@@ -98,6 +104,14 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EjemploConversion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EjemploDialogo.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EjemploDialogoMain.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
