@@ -91,6 +91,9 @@
     <Compile Include="EjemploUserControl.xaml.cs">
       <DependentUpon>EjemploUserControl.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EjemploWebBrowser.xaml.cs">
+      <DependentUpon>EjemploWebBrowser.xaml</DependentUpon>
+    </Compile>
     <Compile Include="LimitedInputUserControl.xaml.cs">
       <DependentUpon>LimitedInputUserControl.xaml</DependentUpon>
     </Compile>
@@ -145,6 +148,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EjemploUserControl.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EjemploWebBrowser.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
