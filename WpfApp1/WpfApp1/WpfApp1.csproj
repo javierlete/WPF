@@ -55,6 +55,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="EjemploAplicacion.xaml.cs">
+      <DependentUpon>EjemploAplicacion.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EjemploBindingBasico.xaml.cs">
       <DependentUpon>EjemploBindingBasico.xaml</DependentUpon>
     </Compile>
@@ -91,6 +94,10 @@
     <Compile Include="Window2.xaml.cs">
       <DependentUpon>Window2.xaml</DependentUpon>
     </Compile>
+    <Page Include="EjemploAplicacion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="EjemploBindingBasico.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

@@ -1,0 +1,47 @@
+﻿<Window x:Class="WpfApp1.EjemploAplicacion"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="EjemploAplicacion" WindowState="Maximized">
+    <DockPanel>
+        <Menu DockPanel.Dock="Top">
+            <MenuItem Header="_File">
+                <MenuItem Command="New"/>
+                <MenuItem Command="Open" />
+            </MenuItem>
+            <MenuItem Header="_Edit">
+                <MenuItem Command="Cut" />
+                <MenuItem Command="Copy" />
+                <MenuItem Command="Paste" />
+            </MenuItem>
+        </Menu>
+        <ToolBarTray DockPanel.Dock="Top">
+            <ToolBar>
+                <Button>New</Button>
+                <Button>Open</Button>
+                <Button ToolBar.OverflowMode="Always">Administración</Button>
+            </ToolBar>
+            <ToolBar>
+                <Button Command="Cut">Cut</Button>
+                <Button Command="Copy">Copy</Button>
+                <Button ToolBar.OverflowMode="Never" Command="Paste">Paste</Button>
+            </ToolBar>
+        </ToolBarTray>
+        <ToolBarTray DockPanel.Dock="Right" Orientation="Vertical">
+            <ToolBar>
+                <Button>New</Button>
+                <Button>Open</Button>
+                <Button ToolBar.OverflowMode="Always">Administración</Button>
+            </ToolBar>
+            <ToolBar>
+                <Button Command="Cut">Cut</Button>
+                <Button Command="Copy">Copy</Button>
+                <Button ToolBar.OverflowMode="Never" Command="Paste">Paste</Button>
+            </ToolBar>
+        </ToolBarTray>
+        <TextBox AcceptsReturn="True" />
+    </DockPanel>
+</Window>
