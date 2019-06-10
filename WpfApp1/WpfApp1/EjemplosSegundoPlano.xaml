@@ -1,0 +1,29 @@
+﻿<Window x:Class="WpfApp1.EjemplosSegundoPlano"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfApp1"
+        mc:Ignorable="d"
+        Title="EjemplosSegundoPlano" Height="450" Width="800">
+    <StackPanel>
+        <Label Name="lblTime" FontSize="48" HorizontalAlignment="Center" VerticalAlignment="Center" />
+        <Button Name="Parar" Click="Parar_Click">Parar</Button>
+        
+        <DockPanel Margin="10">
+            <DockPanel DockPanel.Dock="Top">
+                <Button Name="btnDoSynchronousCalculation" Click="btnDoSynchronousCalculation_Click" DockPanel.Dock="Left" HorizontalAlignment="Left">Synchronous (same thread)</Button>
+                <Button Name="btnDoAsynchronousCalculation" Click="btnDoAsynchronousCalculation_Click" DockPanel.Dock="Right" HorizontalAlignment="Right">Asynchronous (worker thread)</Button>
+                <Button Name="btnCancelAsync" Click="BtnCancelAsync_Click" HorizontalAlignment="Right">
+                    Cancelar
+                </Button>
+            </DockPanel>
+            <ProgressBar DockPanel.Dock="Top" Height="18" Name="pbCalculationProgress" />
+
+            <ListBox Name="lbResults" Margin="0,10" />
+
+        </DockPanel>
+        
+        
+    </StackPanel>
+</Window>

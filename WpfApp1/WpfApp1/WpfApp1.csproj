@@ -94,6 +94,9 @@
     <Compile Include="EjemploProgressBar.xaml.cs">
       <DependentUpon>EjemploProgressBar.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EjemplosSegundoPlano.xaml.cs">
+      <DependentUpon>EjemplosSegundoPlano.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EjemploUserControl.xaml.cs">
       <DependentUpon>EjemploUserControl.xaml</DependentUpon>
     </Compile>
@@ -158,6 +161,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EjemploProgressBar.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EjemplosSegundoPlano.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
