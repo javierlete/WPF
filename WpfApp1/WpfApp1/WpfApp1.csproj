@@ -70,6 +70,9 @@
     <Compile Include="EjemploConversion.xaml.cs">
       <DependentUpon>EjemploConversion.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EjemploDataGrid.xaml.cs">
+      <DependentUpon>EjemploDataGrid.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EjemploDialogo.xaml.cs">
       <DependentUpon>EjemploDialogo.xaml</DependentUpon>
     </Compile>
@@ -120,6 +123,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EjemploConversion.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EjemploDataGrid.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
