@@ -9,7 +9,7 @@
    Title = "MainWindow" Height = "350" Width = "525">
 
     <Grid>
-        <views:StudentView x:Name = "StudentViewControl" Loaded = "StudentViewControl_Loaded"/>
+        <views:StudentView x:Name = "StudentViewControl"/>
     </Grid>
 
 </Window>
