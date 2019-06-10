@@ -23,6 +23,32 @@
                     </DataGridTemplateColumn>
 
                 </DataGrid.Columns>
+                <DataGrid.RowDetailsTemplate>
+                    <DataTemplate>
+                        <DockPanel Background="GhostWhite">
+                            <Image DockPanel.Dock="Left" Source="{Binding ImageUrl}" Height="64" Margin="10" />
+                            <Grid Margin="0,10">
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="*" />
+                                </Grid.ColumnDefinitions>
+                                <Grid.RowDefinitions>
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                    <RowDefinition Height="Auto" />
+                                </Grid.RowDefinitions>
+
+                                <TextBlock Text="ID: " FontWeight="Bold" />
+                                <TextBlock Text="{Binding Id}" Grid.Column="1" />
+                                <TextBlock Text="Name: " FontWeight="Bold" Grid.Row="1" />
+                                <TextBlock Text="{Binding Name}" Grid.Column="1" Grid.Row="1" />
+                                <TextBlock Text="Birthday: " FontWeight="Bold" Grid.Row="2" />
+                                <TextBlock Text="{Binding Birthday, StringFormat=d}" Grid.Column="1" Grid.Row="2" />
+
+                            </Grid>
+                        </DockPanel>
+                    </DataTemplate>
+                </DataGrid.RowDetailsTemplate>
             </DataGrid>
         </Grid>
         <Button Content="Ver segundo elemento" Name="btnSegundo" Click="BtnSegundo_Click" />
