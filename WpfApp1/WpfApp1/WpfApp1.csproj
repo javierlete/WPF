@@ -88,6 +88,9 @@
     <Compile Include="EjemploListadoUsuarios.xaml.cs">
       <DependentUpon>EjemploListadoUsuarios.xaml</DependentUpon>
     </Compile>
+    <Compile Include="EjemploMultimedia.xaml.cs">
+      <DependentUpon>EjemploMultimedia.xaml</DependentUpon>
+    </Compile>
     <Compile Include="EjemploProgressBar.xaml.cs">
       <DependentUpon>EjemploProgressBar.xaml</DependentUpon>
     </Compile>
@@ -147,6 +150,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="EjemploListadoUsuarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="EjemploMultimedia.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

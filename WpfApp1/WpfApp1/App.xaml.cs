@@ -28,7 +28,7 @@ namespace WpfApp1
             //wnd.Show();
 
             //MessageBox.Show(new EjemploDialogo().ShowDialog().ToString());
-            new EjemploDataGrid().Show();
+            new EjemploMultimedia().Show();
         }
 
         private void Application_DispatcherUnhandledException(object sender, System.Windows.Threading.DispatcherUnhandledExceptionEventArgs e)
