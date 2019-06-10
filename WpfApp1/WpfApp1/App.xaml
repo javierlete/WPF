@@ -7,5 +7,27 @@
              Startup="Application_Startup">
     <Application.Resources>
         <sys:String x:Key="SaludoInicial">Saludo Inicial</sys:String>
+
+        <Style TargetType="DataGrid">
+            <Setter Property="FontSize" Value="20"/>
+        </Style>
+
+        <Style TargetType="Button">
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="Red" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
+        <Style x:Key="BotonSuperGrande" TargetType="Button">
+            <Setter Property="FontSize" Value="30"/>
+            <Style.Triggers>
+                <Trigger Property="IsMouseOver" Value="True">
+                    <Setter Property="Foreground" Value="Red" />
+                </Trigger>
+            </Style.Triggers>
+        </Style>
+        
     </Application.Resources>
 </Application>
