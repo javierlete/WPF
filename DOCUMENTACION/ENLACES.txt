@@ -6,3 +6,5 @@ http://entityframeworktutorial.net
 
 https://wpf-tutorial.com/
 
+https://www.tutorialspoint.com/mvvm
+
