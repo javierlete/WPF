@@ -8,3 +8,7 @@ https://wpf-tutorial.com/
 
 https://www.tutorialspoint.com/mvvm
 
+
+https://docs.microsoft.com/es-es/dotnet/framework/wpf/getting-started/walkthrough-my-first-wpf-desktop-application
+
+
